@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Nima Dehmamy Tabari's Website</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
+    
+    <!--<script src='js/jquery-3.1.1.min.js'></script>-->
+
+    <!--<script src='js/index.js'>/**/</script>-->
+    
+    <style>
+        body {
+            /*background: url("https://mdbootstrap.com/img/Photos/Others/img (51).jpg")no-repeat center fixed;*/
+            background-size: cover;
+            background: url("img/pics/river.jpg") no-repeat center fixed;
+        }
+    </style>
+</head>
+
+<body class=" hm-black-light">
+    <div class="container-fluid full-bg-img p-5 mt-5">
+
+        <!--Main Navigation-->
+        <header>
+        
+            <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-black scrolling-navbar">
+                
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <!--<li class="nav-item active">-->
+                        <!--    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>-->
+                        <!--</li>-->
+                        
+                    </ul>
+                    <ul class="navbar-nav nav-flex-icons">
+                        <li class="nav-item">
+                            <a class="nav-link"><i class="fa fa-github"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"><i class="fa fa-linkedin"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a id='edit' class="nav-link" onclick="toggleEdit()"><i class="fa fa-edit"></i><span id="edit1">Hide Editor</span></a></li>
+                    </ul>
+                </div>
+            </nav>
+        
+        </header>
+        <!--Main Navigation-->
+         
+        
+
+    <div id="contents" class="row mb-3 white-text">
+        <div class="col-sm-4">
+            <div class="card mt-2">
+                <!--Card image-->
+                <div class="view overlay hm-white-slight">
+                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%287%29.jpg" class="img-fluid" alt="">
+                    <a href="#">
+                      <div class="mask"></div>
+                    </a>
+                </div>
+                    
+                <!--Card content-->
+                <div class="card-body">
+                    <!--Title-->
+                    <h4 class="card-title">Card title</h4>
+                    <!--Text-->
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Button</a>
+                </div>
+            </div>
+        <!--/.Card-->
+        </div>
+    <div class="col-sm-4">
+
+    <div class="card mt-2">
+        <!--Card image-->
+        <div class="view overlay hm-white-slight">
+            <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%287%29.jpg" class="img-fluid" alt="">
+            <a href="#">
+              <div class="mask"></div>
+            </a>
+        </div>
+            
+        <!--Card content-->
+        <div class="card-body">
+            <!--Title-->
+            <h4 class="card-title">Card title</h4>
+            <!--Text-->
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Button</a>
+        </div>
+    </div>
+    <!--/.Card-->
+    </div> <!--col-6-->
+    </div> <!--row-->
+    
+    
+        
+        <div id='editor' style='display:block'>
+            <div id='footer'></div>
+            <div class="btn btn-primary" style='float:left' onclick="dlActive()"><a>Download <span id='dlPpage'>Page</span></a></div>
+            <div class="btn btn-primary" style='float:right' onclick="updateContents()"><a >Update Contents</a></div>
+            
+            <div id='footer'></div>
+            <textarea>
+                <h2>Make your page down here!</h2>
+                <p> Use the formatting tools. You can also type LaTeX $\sum x^2$.</p>
+            </textarea>
+        </div>
+    </div> <!--/.container-->
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <!-- Tiny MCE -->
+     <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+    <script>
+    tinymce.init({
+        selector: 'textarea',
+        height: 500,
+        theme: 'modern',
+        plugins: [
+            'advlist autolink lists link image charmap print preview hr anchor pagebreak',
+            'searchreplace wordcount visualblocks visualchars code fullscreen',
+            'insertdatetime media nonbreaking save table contextmenu directionality',
+            'emoticons template paste textcolor colorpicker textpattern imagetools codesample toc'
+        ],
+        toolbar1: 'undo redo | insert | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
+        toolbar2: 'print preview media | forecolor backcolor emoticons | codesample',
+        image_advtab: true,
+        templates: [
+            { title: 'Test template 1', content: 'Test 1' },
+            { title: 'Test template 2', content: 'Test 2' }
+        ],
+        content_css: [
+            '//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
+            '//www.tinymce.com/css/codepen.min.css'
+        ]
+    });
+    </script>
+    <!-- My Functions -->
+    <script src='js/index.js'>/**/</script>
+    <script type="text/javascript">
+        makePage("Home");
+        makePage("Contact");
+        $('#aHome').click();
+    </script>
+    
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    
+    
+    
+</body>
+
+</html>
