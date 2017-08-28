@@ -31,7 +31,7 @@
 <body class=" hm-black-light">
     <div class="container-fluid full-bg-img p-5 mt-5">
 
-        <!--Main Navigation-->
+        <!--Main Navigation hm-black-light-->
         <header>
         
             <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-black scrolling-navbar">
@@ -65,55 +65,9 @@
         </header>
         <!--Main Navigation-->
          
-        
 
-    <div id="contents" class="row mb-3 white-text">
-        <div class="col-sm-4">
-            <div class="card mt-2">
-                <!--Card image-->
-                <div class="view overlay hm-white-slight">
-                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%287%29.jpg" class="img-fluid" alt="">
-                    <a href="#">
-                      <div class="mask"></div>
-                    </a>
-                </div>
-                    
-                <!--Card content-->
-                <div class="card-body">
-                    <!--Title-->
-                    <h4 class="card-title">Card title</h4>
-                    <!--Text-->
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Button</a>
-                </div>
-            </div>
-        <!--/.Card-->
-        </div>
-    <div class="col-sm-4">
-
-    <div class="card mt-2">
-        <!--Card image-->
-        <div class="view overlay hm-white-slight">
-            <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%287%29.jpg" class="img-fluid" alt="">
-            <a href="#">
-              <div class="mask"></div>
-            </a>
-        </div>
-            
-        <!--Card content-->
-        <div class="card-body">
-            <!--Title-->
-            <h4 class="card-title">Card title</h4>
-            <!--Text-->
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Button</a>
-        </div>
-    </div>
-    <!--/.Card-->
-    </div> <!--col-6-->
-    </div> <!--row-->
-    
-    
+        <div id="contents" class="row mb-3">
+        </div> <!--row-->
         
         <div id='editor' style='display:block'>
             <div id='footer'></div>
@@ -158,10 +112,12 @@
     });
     </script>
     <!-- My Functions -->
-    <script src='js/index.js'>/**/</script>
+    <script src='js/index.js'>/*Main functions*/</script>
     <script type="text/javascript">
         makePage("Home");
         makePage("Contact");
+        makeResearch('Deep','research/deep');
+        
         $('#aHome').click();
     </script>
     
