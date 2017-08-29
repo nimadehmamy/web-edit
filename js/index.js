@@ -19,7 +19,7 @@ function makePageDiv(name, fname,func){
     func = func || function(a){null;};
     var name0 = name.replace(' ','');
     fname = fname || name0;
-    $('#contents')[0].innerHTML += "<div id='"+name0+"' class='pa-" + name0 + " page d-none' onclick='editThis()'><h2>" + name + "</h2></div>\n";
+    $('#contents')[0].innerHTML += "<div id='"+name0+"' class='card row p-3 mb-2 pa-" + name0 + " page d-none' onclick='editThis()'><h2>" + name + "</h2></div>\n";
     activeToggle();
 
     var Data = $.get("contents/" + fname + ".html",
@@ -63,18 +63,18 @@ function addResearchCard(el,name){
                 <!--Card image-->
                 <div class="view overlay hm-white-slight">
                     <img src="`+img+`" class="img-fluid" alt="">
-                    <a href="#">
+                    <a onclick="showPage('.pa-` + name + `')">
                       <div class="mask"></div>
                     </a>
                 </div>
                     
                 <!--Card content-->
-                <div class="card-body">
+                <div class="card-body" style="text-align: center;">
                     <!--Title-->
                     <h4 class="card-title">`+title+`</h4>
                     <!--Text-->
                     <p class="card-text">`+content+`</p>
-                    <a href="#" class="btn btn-primary">More...</a>
+                    <a onclick="showPage('.pa-` + name + `')" class="btn btn-indigo btn-md"><i class="fa fa-clone left"></i> View project</a>
                 </div>
             </div>
         <!--/.Card-->

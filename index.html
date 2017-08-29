@@ -48,6 +48,9 @@
                     </ul>
                     <ul class="navbar-nav nav-flex-icons">
                         <li class="nav-item">
+                            <a class="nav-link" onclick="showPage('.pa-CV')"><i class="fa fa-file-pdf-o"></i> CV</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link"><i class="fa fa-github"></i></a>
                         </li>
                         <li class="nav-item">
@@ -66,7 +69,7 @@
         <!--Main Navigation-->
          
 
-        <div id="contents" class="row mb-3">
+        <div id="contents" class="container-fluid mb-3">
         </div> <!--row-->
         
         <div id='editor' style='display:block'>
@@ -115,9 +118,16 @@
     <script src='js/index.js'>/*Main functions*/</script>
     <script type="text/javascript">
         makePage("Home");
-        makePage("Contact");
-        makeResearch('Deep','research/deep');
+        $('.pa-Home').removeClass('card');
         
+        makePage("Contact");
+        makePageDiv('CV');
+        makeResearch('Deep','research/Deep');
+        makeResearch('3D','research/3D');
+        makeResearch('3D','research/3D');
+        makeResearch('3D','research/3D');
+        makeResearch('Deep','research/Deep');
+        makeResearch('3D','research/3D');
         $('#aHome').click();
     </script>
     
