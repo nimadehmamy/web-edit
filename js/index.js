@@ -14,12 +14,13 @@ function addtoNav(name){
     $('.mr-auto').append(node);
 }
 
-function makePageDiv(name, fname,func){
+function makePageDiv(name, fname,func,lab){
     console.log(name0);
+    lab = lab || '#contents';
     func = func || function(a){null;};
     var name0 = name.replace(' ','');
     fname = fname || name0;
-    $('#contents')[0].innerHTML += "<div id='"+name0+"' class='card row p-3 mb-2 pa-" + name0 + " page d-none' onclick='editThis()'><h2>" + name + "</h2></div>\n";
+    $(lab)[0].innerHTML += "<div id='"+name0+"' class='card row p-3 mb-2 pa-" + name0 + " page d-none' onclick='editThis()'><h2>" + name + "</h2></div>\n";
     activeToggle();
 
     var Data = $.get("contents/" + fname + ".html",
@@ -49,7 +50,7 @@ also be converted to a card and displayed in the Home page.
 function makeResearch(name, fname){
     makePageDiv(name, fname, function(a){
         addResearchCard('#res-cards', a);
-    });
+    }, '#contents');
 }
 
 function addResearchCard(el,name){
@@ -58,12 +59,12 @@ function addResearchCard(el,name){
     var title = $('#'+name+'>.res-int>.media>.media-body>h4').html();
     var content = $('#'+name+'>.res-int>.media>.media-body>p').html();
     console.log("name:",name,'img:',img,'title:',content);
-    $('#res-cards')[0].innerHTML +=`<div class="col-sm-4">
-            <div class="card mt-2">
+    $('#res-cards')[0].innerHTML +=`<div class="col-sm-4 p-0">
+            <div class="card m-1">
                 <!--Card image-->
                 <div class="view overlay hm-white-slight">
-                    <img src="`+img+`" class="img-fluid" alt="">
-                    <a onclick="showPage('.pa-` + name + `')">
+                    <img src="`+img+`" class="img-fluid img-responsive p-2" alt="">
+                    <a onclick="showPage('.pa-` + name + `')" href="#` + name + `">
                       <div class="mask"></div>
                     </a>
                 </div>
@@ -74,7 +75,7 @@ function addResearchCard(el,name){
                     <h4 class="card-title">`+title+`</h4>
                     <!--Text-->
                     <p class="card-text">`+content+`</p>
-                    <a onclick="showPage('.pa-` + name + `')" class="btn btn-indigo btn-md"><i class="fa fa-clone left"></i> View project</a>
+                    <a onclick="showPage('.pa-` + name + `')" class="btn btn-indigo btn-md" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample"><i class="fa fa-clone left"></i> View project</a>
                 </div>
             </div>
         <!--/.Card-->
@@ -126,6 +127,24 @@ function showPage(el){
     // put the page contents into the editor
     // tinyMCE.activeEditor.setContent(v.innerHTML);
 }
+
+function showPage2(el){
+    var p = $('.page');
+    p.addClass('d-none'); // to hide all pages
+    // make this page visible
+    v = $(el);
+    v.removeClass('d-none');
+    v.addClass('active');
+    // put the page contents into the editor
+    // tinyMCE.activeEditor.setContent(v.innerHTML);
+    // <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    //         Link with href
+    //       </a>
+    //       <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    //         Button with data-target
+    //       </button>
+}
+
 
 function mJax(elem){
     try{

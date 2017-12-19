@@ -18,12 +18,23 @@
     <!--<script src='js/jquery-3.1.1.min.js'></script>-->
 
     <!--<script src='js/index.js'>/**/</script>-->
-    
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js??config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ tex2jax: {inlineMath: [["$", "$"],["\\(", "\\)"]]} });
+    </script>
+    <script type="text/javascript"
+    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML-full">
+    </script>
     <style>
         body {
             /*background: url("https://mdbootstrap.com/img/Photos/Others/img (51).jpg")no-repeat center fixed;*/
             background-size: cover;
             background: url("img/pics/river.jpg") no-repeat center fixed;
+            
+        }
+        .img-responsive {
+            margin: 0 auto;
         }
     </style>
 </head>
@@ -51,13 +62,13 @@
                             <a class="nav-link" onclick="showPage('.pa-CV')"><i class="fa fa-file-pdf-o"></i> CV</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link"><i class="fa fa-github"></i></a>
+                            <a class="nav-link" title="github" href="https://github.com/nimadehmamy" target="_blank"><i class="fa fa-github"></i></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link"><i class="fa fa-twitter"></i></a>
+                            <a class="nav-link" title="Google Scholar" href="https://scholar.google.com/citations?user=gvHpUtgAAAAJ&hl=en" target="_blank"><i class="fa fa-google"></i></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link"><i class="fa fa-linkedin"></i></a>
+                            <a class="nav-link" title="LinkedIn" href="https://www.linkedin.com/in/nima-dehmamy-57770a4a/" target="_blank"><i class="fa fa-linkedin"></i></a>
                         </li>
                         <li class="nav-item">
                             <a id='edit' class="nav-link" onclick="toggleEdit()"><i class="fa fa-edit"></i><span id="edit1">Hide Editor</span></a></li>
@@ -68,7 +79,22 @@
         </header>
         <!--Main Navigation-->
          
-
+        <!--<p>-->
+        <!--  <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">-->
+        <!--    Link with href-->
+        <!--  </a>-->
+        <!--  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">-->
+        <!--    Button with data-target-->
+        <!--  </button>-->
+        <!--</p>-->
+        
+        <!--<div id="contents0" class="container-fluid mb-3">-->
+        <!--    <div class="collapse" id="collapseExample">-->
+        <!--      <div id="contents2">-->
+        <!--        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.-->
+        <!--      </div>-->
+        <!--    </div>-->
+        <!--</div>--> <!--row-->
         <div id="contents" class="container-fluid mb-3">
         </div> <!--row-->
         
@@ -122,12 +148,15 @@
         
         makePage("Contact");
         makePageDiv('CV');
+        // makePage("Fun");
+        
         makeResearch('Deep','research/Deep');
         makeResearch('3D','research/3D');
-        makeResearch('3D','research/3D');
-        makeResearch('3D','research/3D');
-        makeResearch('Deep','research/Deep');
-        makeResearch('3D','research/3D');
+        makeResearch('3D-Brain','research/3D-Brain');
+        makeResearch('Eurozone','research/GIPSI');
+        makeResearch('GIPSI','research/GIPSI-phase');
+        makeResearch('BH','research/BH');
+        // makeResearch('3D','research/3D');
         $('#aHome').click();
     </script>
     
