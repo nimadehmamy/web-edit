@@ -1,5 +1,5 @@
 <!--<div class="row" style="height:300pt"></div>-->
-<div class="col-lg-6 m-5">
+<div class="col-lg-6 m-2">
     <div class="media mask p-0">
         <img class="col-sm-4 m-0 p-0" src="img/pics/me.jpg">
         <div class="media-body white-text col-sm-8">
@@ -8,17 +8,43 @@
             <p>I am a post-doctoral fellow at the <a href="https://www.barabasilab.com/people/nima-dehmami" target="_blank">Barabasi Lab</a> at Northeastern University, Boston.
             I earned my PhD in Physics at Boston University. My research involves information processing in networks and properties of physical networks such as the brain.
             </p>
+            <p> Email: <a style="color:yellow;" href="mailto:nimadt@bu.edu">nimadt@bu.edu</a>
         </div>
     </div>
+</div>
+<div id="contents2">
+    <div id="res-sum" class="row col-12 white-text m-3">
+        <h1 style="font-weight: 200;margin: auto;">Research</h1>
+    </div>
+    <div id="res-cards" class="row"></div>
+</div> <!--row-->
+<!-- My Functions -->
+<script src='js/index.js'>/*Main functions*/</script>
+<script type="text/javascript">
+    // makePage("Home");
+    // $('.pa-Home').removeClass('card');
     
-</div>
-
-<div id="res-sum" class="row col-12 white-text m-0">
-    <h1 style="font-weight: 200;margin: auto;">Research</h1>
-
-
-
-</div>
-<div id="res-cards" class="row">
+    // makePage("Contact");
+    makePageDiv('CV');
+    // makePage("Fun");
     
-</div>
+    makeResearch('Deep','research/Deep');
+    makeResearch('3D','research/3D');
+    makeResearch('3D-Brain','research/3D-Brain');
+    makeResearch('Eurozone','research/GIPSI');
+    makeResearch('GIPSI','research/GIPSI-phase');
+    makeResearch('BH','research/BH');
+    // makeResearch('3D','research/3D');
+    // $('#aHome').click();
+</script>
+
+
+<!--<div id="res-sum" class="row col-12 white-text m-0">-->
+<!--    <h1 style="font-weight: 200;margin: auto;">Research</h1>-->
+
+
+
+<!--</div>-->
+<!--<div id="res-cards" class="row">-->
+
+<!--</div>-->

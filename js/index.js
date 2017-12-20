@@ -20,7 +20,7 @@ function makePageDiv(name, fname,func,lab){
     func = func || function(a){null;};
     var name0 = name.replace(' ','');
     fname = fname || name0;
-    $(lab)[0].innerHTML += "<div id='"+name0+"' class='card row p-3 mb-2 pa-" + name0 + " page d-none' onclick='editThis()'><h2>" + name + "</h2></div>\n";
+    $(lab)[0].innerHTML += "<div id='"+name0+"' class='card row p-5 mb-2 pa-" + name0 + " page d-none' onclick='editThis()'><h2>" + name + "</h2></div>\n";
     activeToggle();
 
     var Data = $.get("contents/" + fname + ".html",
@@ -50,7 +50,7 @@ also be converted to a card and displayed in the Home page.
 function makeResearch(name, fname){
     makePageDiv(name, fname, function(a){
         addResearchCard('#res-cards', a);
-    }, '#contents');
+    }, '#contents2');
 }
 
 function addResearchCard(el,name){
@@ -72,7 +72,7 @@ function addResearchCard(el,name){
                 <!--Card content-->
                 <div class="card-body" style="text-align: center;">
                     <!--Title-->
-                    <h4 class="card-title">`+title+`</h4>
+                    <h5 class="card-title">`+title+`</h5>
                     <!--Text-->
                     <p class="card-text">`+content+`</p>
                     <a onclick="showPage('.pa-` + name + `')" class="btn btn-indigo btn-md" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample"><i class="fa fa-clone left"></i> View project</a>

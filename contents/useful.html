@@ -1,0 +1,45 @@
+<div class="card m-1">
+    <!--Card image-->
+    <!--<div class="view overlay hm-white-slight">-->
+    <!--    <img src="`+img+`" class="img-fluid img-responsive p-2" alt="">-->
+    <!--    <a onclick="showPage('.pa-` + name + `')" href="#` + name + `">-->
+    <!--      <div class="mask"></div>-->
+    <!--    </a>-->
+    <!--</div>-->
+    <!--Card content-->
+    <div class="card-body m-4">
+        <h3>Some Useful Files</h3>
+        <br>
+        <ol>
+            <li><a href="files/Ystock.py">Yahoo! Finance download script,</a></li>
+            <li><a href="files/GR_Nima_Dehmamy_02_2013.nb">Simplifying General Relativity expressions,</a></li>
+            <li><a href="files/AdS_Nima_Dehmamy_12_2012.nb">Embedded AdS isometries,</a></li>
+        </ol>
+
+        <p><br>Here I will be uploading the files that may be useful. Feel free to use, or modify them as you wish. If you manage to add documentation to some or improve them, I'd appreciate if you could share them with me and let me share them here again with others.
+        </p>
+        <div class="row" id="demo" style=" padding-top:20px;">
+        </div>
+        <ul>
+            <h4>
+                <li>Yahoo! Finance Download Scripts for Python.</li>
+            </h4>
+            <p><a href="files/Ystock.py" download>This</a> provides a couple of useful functions for <a href="http://finance.yahoo.com">Y! Finance</a>. You will probably only need the "GetStock()" function which takes a list of tickers like "['BAC']" and downloads the file for the date range, to a specified path if you like. You don't really need scipy or pandas for this function. That's for the rest of the tools that follow it. I don't remember the original links I learned this from, but it's pretty easy to write such a script. The functions should be clear, but I may add some documentation later. </p>
+            <h4>
+                <li>Mathematica files for General Relativity</li>
+            </h4>
+            <p><a href="files/GR_Nima_Dehmamy_02_2013.nb" download>This script</a> should help you simplify complicated GR expressions. You can provide the metric and it will automatically calculate the Christoffel connection, Riemann and Ricci tensors for you.
+                <br> From what I remember, The documentation you need is this:</p>
+            <center>$\Gamma^\mu_{\alpha\beta}\mbox{(in GR)} \to \Gamma_{\mu,a,b}$ (in the file)</center>
+            <p>My convention in the file was: Greek indices $\mu,\nu,...$ indicate "contravariant" (upper) indices, and Roman $a,b,...$ is used for "covariant" (lower) indices. The reason was in Mathematica there weren't any upper indices (at least to the extent that I knew when I did this), they would count as exponents. Sorry, it definitely needs documentation. I'd appreciate if anyone volunteers to do that.</p>
+            <h4>
+                <li>Mathematica File for Embedded Space (like $AdS_n$ in $R^{n+1}$) Isometries</li>
+            </h4>
+            <p><a href="files/AdS_Nima_Dehmamy_12_2012.nb" download>This one</a> may be useful for calculating tangent space Lie algebra for a space embedded in a higher dimensional one, though the commutator definition and such should be useful elsewhere as well. I think for the Lie algebra part, I basically replaced the derivatives with a p (for example $\ro_t\to$ pt.) That's what the commutator and the "Act[ ]" function, which acts with an operator on another operator or function, uses. This one too needs a lot of documentation, but I don't remember the detail now. It's from late 2012.
+                <!--<h4><li>Driven Non-linear Oscillator Model for News and Financial Market Correlations</li></h4>
+     <p>Description </p>
+     -->
+        </ul>
+
+    </div>
+</div>
